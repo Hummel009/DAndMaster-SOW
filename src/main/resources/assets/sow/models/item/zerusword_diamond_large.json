@@ -1,0 +1,6 @@
+{
+  "parent": "sow:item/handheld_hummel",
+  "textures": {
+	"layer0": "sow:item/zerusword_diamond_large"
+  }
+}
