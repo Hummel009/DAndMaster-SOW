@@ -1,6 +1,7 @@
 package sow;
 
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.BowItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.DistExecutor;
@@ -187,6 +188,8 @@ public class AW {
 	public static final RegistryObject<Item> ZERUSPEAR_IRON = ITEMS.register("zeruspear_iron", AWItemSword::new);
 	public static final RegistryObject<Item> ZERUSWORD_DIAMOND = ITEMS.register("zerusword_diamond", AWItemSword::new);
 	public static final RegistryObject<Item> ZERUSWORD_IRON = ITEMS.register("zerusword_iron", AWItemSword::new);
+
+	public static final RegistryObject<Item> NETHER_BOW = ITEMS.register("nether_bow", () -> new BowItem((new Item.Properties()).durability(384).tab(AWCreativeTabs.TAB_SOW)));
 
 	public AW() {
 		IEventBus fmlBus = FMLJavaModLoadingContext.get().getModEventBus();
