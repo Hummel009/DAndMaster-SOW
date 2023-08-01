@@ -1,6 +1,0 @@
-{
-  "parent": "sow:item/handheld_hummel",
-  "textures": {
-	"layer0": "sow:item/sword_iron_1_large"
-  }
-}
