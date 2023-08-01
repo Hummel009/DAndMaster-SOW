@@ -1,0 +1,6 @@
+{
+  "parent": "sow:item/handheld_hummel",
+  "textures": {
+	"layer0": "sow:item/battleaxe_saxon_large"
+  }
+}

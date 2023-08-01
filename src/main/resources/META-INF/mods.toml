@@ -1,0 +1,18 @@
+modLoader = "javafml"
+loaderVersion = "[3,)"
+license = "Powered by DAndMAster"
+
+[[mods]]
+modId = "sow"
+version = "23.07.26"
+displayName = "Legendary Item from Ardonia"
+logoFile = "logo.png"
+credits = "DAND"
+authors = "DAND"
+description = '''Welcome to Ardonia'''
+[[dependencies.sow]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.19.2]"
+ordering = "NONE"
+side = "BOTH"

@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+	"layer0": "sow:item/halberd_iron_double"
+  }
+}
