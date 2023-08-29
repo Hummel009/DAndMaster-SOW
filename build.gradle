@@ -8,7 +8,11 @@ version = '1.0'
 group = 'com.yourname.modid'
 archivesBaseName = 'modid'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
 
 println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 
