@@ -25,7 +25,6 @@ minecraft {
 			workingDirectory project.file('run') as File
 			property 'forge.logging.markers', 'REGISTRIES'
 			property 'forge.logging.console.level', 'debug'
-			property 'forge.enabledGameTestNamespaces', 'examplemod'
 			mods {
 				examplemod {
 					source sourceSets.main as SourceSet
