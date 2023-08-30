@@ -10,7 +10,7 @@ plugins {
 final def currentDate = LocalDate.now()
 version = 'v' + currentDate.format(DateTimeFormatter.ofPattern('yy.MM.dd'))
 group = 'com.yourname.modid'
-archivesBaseName = 'DAndMaster\'s SOW'
+archivesBaseName = 'DAndMaster SOW'
 
 java {
 	toolchain {
