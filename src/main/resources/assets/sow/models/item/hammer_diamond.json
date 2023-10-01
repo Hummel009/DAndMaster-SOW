@@ -1,6 +1,6 @@
 {
-  "parent": "item/handheld",
-  "textures": {
-	"layer0": "sow:item/hammer_diamond"
-  }
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "sow:item/hammer_diamond"
+	}
 }

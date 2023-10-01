@@ -1,6 +1,6 @@
 {
-  "parent": "sow:item/handheld_hummel2",
-  "textures": {
-	"layer0": "sow:item/xariaxe_diamond"
-  }
+	"parent": "sow:item/handheld_hummel2",
+	"textures": {
+		"layer0": "sow:item/xariaxe_diamond"
+	}
 }

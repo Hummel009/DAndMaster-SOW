@@ -1,6 +1,6 @@
 {
-  "parent": "item/handheld",
-  "textures": {
-	"layer0": "sow:item/staffhonor_gold"
-  }
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "sow:item/staffhonor_gold"
+	}
 }

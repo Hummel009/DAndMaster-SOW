@@ -1,6 +1,6 @@
 {
-  "parent": "item/handheld",
-  "textures": {
-	"layer0": "sow:item/dagger_iron"
-  }
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "sow:item/dagger_iron"
+	}
 }

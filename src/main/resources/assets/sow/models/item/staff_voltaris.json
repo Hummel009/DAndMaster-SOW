@@ -1,6 +1,6 @@
 {
-  "parent": "item/handheld",
-  "textures": {
-	"layer0": "sow:item/staff_voltaris"
-  }
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "sow:item/staff_voltaris"
+	}
 }

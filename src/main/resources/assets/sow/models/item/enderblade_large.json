@@ -1,6 +1,6 @@
 {
-  "parent": "sow:item/handheld_hummel",
-  "textures": {
-	"layer0": "sow:item/enderblade_large"
-  }
+	"parent": "sow:item/handheld_hummel",
+	"textures": {
+		"layer0": "sow:item/enderblade_large"
+	}
 }
