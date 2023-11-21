@@ -2,11 +2,17 @@ import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 
 plugins {
-	id("net.minecraftforge.gradle") version "[6.0.14,6.2)"
+	id("net.minecraftforge.gradle") version "[6.0.16,6.2)"
 }
 
 group = "hummel"
 version = "v" + LocalDate.now().format(DateTimeFormatter.ofPattern("yy.MM.dd"))
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
 
 minecraft {
 	mappings("official", "1.19.2")
