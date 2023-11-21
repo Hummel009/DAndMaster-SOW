@@ -20,7 +20,6 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 public class AWClientProxy extends AWCommonProxy {
 	public static final Map<ResourceLocation, ResourceLocation> COMPLIANCES = new HashMap<>();
@@ -28,7 +27,7 @@ public class AWClientProxy extends AWCommonProxy {
 	@SubscribeEvent
 	@OnlyIn(Dist.CLIENT)
 	public void onModifyBakingResult(ModelEvent.BakingCompleted event) {
-		for (Map.Entry<ResourceLocation, ResourceLocation> compliance : COMPLIANCES.entrySet()) {
+		for (var compliance : COMPLIANCES.entrySet()) {
 			var smallLocation = new ModelResourceLocation(compliance.getKey(), "inventory");
 			var smallModel = event.getModels().get(smallLocation);
 			if (smallModel != null) {
@@ -44,8 +43,8 @@ public class AWClientProxy extends AWCommonProxy {
 	@SubscribeEvent
 	@OnlyIn(Dist.CLIENT)
 	public void onRegisterAdditional(ModelEvent.RegisterAdditional event) {
-		Set<ResourceLocation> resourceLocations = Minecraft.getInstance().getResourceManager().listResources("models", loc -> "sow".equals(loc.getNamespace()) && loc.getPath().endsWith("_large.json")).keySet();
-		for (ResourceLocation resourceLocation : resourceLocations) {
+		var resourceLocations = Minecraft.getInstance().getResourceManager().listResources("models", loc -> "sow".equals(loc.getNamespace()) && loc.getPath().endsWith("_large.json")).keySet();
+		for (var resourceLocation : resourceLocations) {
 			var itemName = resourceLocation.getPath().replace("models/item/", "").replace("_large.json", "");
 			var smallModel = new ResourceLocation("sow", itemName);
 			var largeModel = new ResourceLocation("sow", "item/" + itemName + "_large");
@@ -57,7 +56,7 @@ public class AWClientProxy extends AWCommonProxy {
 	public record LargeItemModel(BakedModel smallModel, BakedModel largeModel) implements BakedModel {
 		@Override
 		public BakedModel applyTransform(ItemTransforms.TransformType itemDisplayContext, PoseStack poseStack, boolean b) {
-			BakedModel bakedModel = smallModel;
+			var bakedModel = smallModel;
 			if (itemDisplayContext == ItemTransforms.TransformType.FIRST_PERSON_LEFT_HAND || itemDisplayContext == ItemTransforms.TransformType.FIRST_PERSON_RIGHT_HAND || itemDisplayContext == ItemTransforms.TransformType.THIRD_PERSON_LEFT_HAND || itemDisplayContext == ItemTransforms.TransformType.THIRD_PERSON_RIGHT_HAND) {
 				bakedModel = largeModel;
 			}
