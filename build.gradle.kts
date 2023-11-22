@@ -8,6 +8,10 @@ plugins {
 group = "hummel"
 version = "v" + LocalDate.now().format(DateTimeFormatter.ofPattern("yy.MM.dd"))
 
+dependencies {
+	minecraft("net.minecraftforge:forge:1.19.2-43.3.5")
+}
+
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(17)
@@ -22,10 +26,6 @@ minecraft {
 			property("forge.logging.markers", "REGISTRIES")
 		}
 	}
-}
-
-dependencies {
-	minecraft("net.minecraftforge:forge:1.19.2-43.3.5")
 }
 
 tasks {
